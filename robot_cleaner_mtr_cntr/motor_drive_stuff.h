@@ -1,7 +1,7 @@
 #ifndef MOTOR_DRIVE_STUFF_H_
 #define MOTOR_DRIVE_STUFF_H_
 
-
+int gamma1 = 0;
 // Motor right
  
 uint8_t enA = 12;
@@ -24,7 +24,7 @@ const int motorPWMChannnelA = 7;
 const int motorPWMChannnelB = 2;
 uint8_t lresolution = 8;
  
-uint8_t  motor_speed   = 200;
+uint8_t  motor_speed   = 150;
 volatile unsigned long previous_time = 0;
 volatile unsigned long move_interval = 250;
 
@@ -34,11 +34,11 @@ void update_speed()
 { 
     ledcWrite(motorPWMChannnelA, motor_speed);
 
-    Serial.println("motor_speed");
+//    Serial.println("motor_speed");
     
-    ledcWrite(motorPWMChannnelB, motor_speed);
+    ledcWrite(motorPWMChannnelB, motor_speed+gamma1);
 
-    Serial.println(motor_speed);
+//    Serial.println(motor_speed);
     
 }
 

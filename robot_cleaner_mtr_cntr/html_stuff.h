@@ -1,8 +1,19 @@
 
+/*********
+  Rui Santos
+  Complete project details at https://RandomNerdTutorials.com/esp32-web-server-slider-pwm/
+  
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files.
+  
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+*********/
+
 #ifndef HTML_STUFF_H_
 #define HTML_STUFF_H_
 
-
+#include <WiFi.h>
 #include <AsyncTCP.h>
 #include <ESPAsyncWebServer.h>
 #include "motor_drive_stuff.h"
@@ -25,8 +36,8 @@ test_struct myData;
 //extern uint8_t robo;
 
 
-const char* ssid = "ssid";
-const char* password = "pwd";
+const char* ssid = "*";
+const char* password = "*";
 
 String sliderValue = "000";
 String variable;
