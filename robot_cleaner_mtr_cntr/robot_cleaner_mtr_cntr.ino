@@ -3,6 +3,7 @@
 // Import required libraries
 #include "sonar_stuff.h"
 #include "html_stuff.h"
+#include "motor_driver_stuff.h"
 #include "gyro_stuff.h"
 #include "rotary_encoder_stuff.h"
 #include <millisDelay.h>
